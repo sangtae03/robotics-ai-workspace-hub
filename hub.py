@@ -36,7 +36,7 @@ def main():
         chosen = [i for i in chosen if not i['archived']]
     if args.command == 'list':
         for i in chosen:
-            print(f"{i['repo']} | {i['output']} | {i['description']}")
+            print(f"{i['repo']} | {data['sectors'][i['sector']]} | {i['description']}")
         print(f'{len(chosen)} repositories')
         return
     if not (args.all or args.repo or args.category):

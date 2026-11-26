@@ -1,20 +1,30 @@
 # Robotics AI Workspace Hub
 
-**로봇·Physical AI 관련 GitHub 저장소 222개 / 21개 분야**를 모았습니다. 개인화 추천이나 순위로 줄이지 않고, 개발 환경·스튜디오·ROS·AI 에이전트·시뮬레이터·정책·데이터·비전·계획·휴머노이드·드론·촉각 도구를 함께 공개합니다.
+**로봇·Physical AI 관련 GitHub 저장소 273개 / 24개 분야**를 모았습니다. 개인화 추천이나 순위로 줄이지 않고, 개발 환경·스튜디오·ROS·AI 에이전트·시뮬레이터·정책·데이터·비전·계획·휴머노이드·드론·촉각·Wan·WAM·HRI 도구를 함께 공개합니다.
 
-[검색 페이지 파일](index.html) · [전체 JSON](catalog.json) · [선택 다운로드](hub.py)
+[검색 웹페이지](https://sangtae03.github.io/robotics-ai-workspace-hub/) · [HTML 파일](index.html) · [전체 JSON](catalog.json) · [선택 다운로드](hub.py)
 
 관련 모음: [웹 디자인·앱 개발 도구](https://github.com/sangtae03/design-app-dev-hub) · [PPT 제작 도구](https://github.com/sangtae03/ppt-tools-hub)
 
 ## 목록의 범위
 
-- 확인일: **2026-11-26**. 저장소 **222개**, 분야 **21개**. 보관된 프로젝트도 삭제하지 않고 표시했습니다.
-- 221개는 GitHub API 메타데이터로 원본 주소·설명·상태 등을 확인했습니다. ONNX Runtime은 원본 GitHub 웹 검색으로 확인했으며 API 조회 실패로 상태·시각·라이선스 필드는 비워뒀습니다.
+- 확인일: **2026-11-26**. 저장소 **273개**, 분야 **24개**. 보관된 프로젝트도 삭제하지 않고 표시했습니다.
+- 272개는 GitHub API 메타데이터로 원본 주소·설명·상태 등을 확인했습니다. ONNX Runtime은 원본 GitHub 웹 검색으로 확인했으며 API 조회 실패로 상태·시각·라이선스 필드는 비워뒀습니다.
 - GitHub 전체를 빠짐없이 수록한 완전 목록은 아닙니다. 이번 확장 조사에서 확인한 목록입니다.
 - 설명은 기능·용도 안내이며 설치·빌드·성능·실물 로봇 성공·SO-101/Thor 호환성을 전부 검증한 결과가 아닙니다.
 - 로봇 전용 프로젝트와 일반 AI/최적화/환경 관리 기반 도구를 분야별로 구분했습니다. 확장 포크는 기능이 다른 구현이면 남겼습니다.
 - 최근 push는 GitHub API의 UTC 시각으로 릴리스일이나 유지보수 품질 점수가 아닙니다.
 - 원본 소스·모델·SDK·데이터·에셋은 각자의 라이선스와 접근 조건을 따릅니다. 미표시·NOASSERTION은 자유 사용 허가가 아닙니다.
+
+## Wan · WAM · VLA · HRI 확장
+
+- **Wan**: 영상 생성 기반 모델·추론 UI·미세조정 도구입니다. Wan 원본만으로 로봇 관절 행동이 출력되지는 않습니다.
+- **월드 모델 / WAM**: 미래 영상 예측·환경 생성·영상–행동 공동 모델을 포함합니다. 범용 환경 생성과 로봇 정책은 설명에서 구분했습니다.
+- **VLA**: 영상·언어·로봇 상태에서 행동을 생성하는 정책·학습 프레임워크입니다. SmolVLA는 기존 LeRobot 저장소 안에 포함됩니다.
+- **HRI**: 사람 인식·대화·사회적 관여·협업·사람 개입·평가 도구입니다. ROS4HRI 패키지는 브랜치·ROS 배포판별 호환성을 따로 확인하세요.
+- Qwen-VLA는 확인 시점에 공식 소개·보고서·데모 중심입니다. 실행 가능한 학습·추론 도구와 동일하게 해석하지 마세요.
+- LingBot-World v1은 원본 문서에서 유지보수 종료와 v2 이전을 안내합니다. GitHub archived 상태와는 별개입니다.
+- 이번 확장: Wan 도구 8개, 월드 모델/WAM 8개, VLA 15개, HRI 20개 = **51개 추가**. VLA 분야는 기존 12개에서 **27개**로 늘었습니다.
 
 ## 분야별 바로가기
 
@@ -27,7 +37,7 @@
 | [MCP · AI 도구 연결](#sector-mcp) | `mcp` | 10 |
 | [물리 엔진 · 범용 시뮬레이터](#sector-physics) | `physics` | 10 |
 | [조작 시뮬레이션 · 벤치마크](#sector-sim) | `sim` | 16 |
-| [VLA · 범용 로봇 모델](#sector-vla) | `vla` | 12 |
+| [VLA · 범용 로봇 모델](#sector-vla) | `vla` | 27 |
 | [모방학습 · 정책 · 실물 강화학습](#sector-learning) | `learning` | 12 |
 | [강화학습 알고리즘 · 학습 인프라](#sector-rl) | `rl` | 10 |
 | [데이터 · 로깅 · 검수](#sector-data) | `data` | 10 |
@@ -41,10 +51,13 @@
 | [드론 · 자율주행 · 다중 로봇](#sector-drone) | `drone` | 10 |
 | [배포 · 월드 모델 · 추가 탐색](#sector-deploy) | `deploy` | 15 |
 | [촉각 센서 · 접촉 조작](#sector-tactile) | `tactile` | 5 |
+| [Wan · 영상 생성 · 학습 도구](#sector-wan) | `wan` | 8 |
+| [월드 모델 · WAM · 영상–행동 예측](#sector-wam) | `wam` | 8 |
+| [HRI · 사람 인식 · 대화 · 협업](#sector-hri) | `hri` | 20 |
 
 ## 검색 페이지
 
-`index.html`은 외부 서비스 없이 목록 데이터를 포함하는 정적 페이지입니다. 내려받아 브라우저에서 열 수 있습니다. 처음에는 보관 항목을 포함한 **222개 전체**를 표시합니다. 이름·설명 검색, 분야 선택, 이름·최근 push·별 수 정렬을 지원합니다. 별 수는 추천 순위가 아닙니다.
+`index.html`은 외부 서비스 없이 목록 데이터를 포함하는 정적 페이지입니다. 내려받아 브라우저에서 열 수 있습니다. 처음에는 보관 항목을 포함한 **273개 전체**를 표시합니다. 이름·설명 검색, 분야 선택, 이름·최근 push·별 수 정렬을 지원합니다. 별 수는 추천 순위가 아닙니다.
 
 ## 소스 선택 다운로드
 
@@ -208,7 +221,7 @@ python hub.py fetch --all --include-archived --dry-run
 
 <a id="sector-vla"></a>
 
-### VLA · 범용 로봇 모델 · 12개
+### VLA · 범용 로봇 모델 · 27개
 
 | 저장소 | 역할 | 상태 |
 |---|---|---|
@@ -224,6 +237,21 @@ python hub.py fetch --all --include-archived --dry-run
 | [allenai/molmoact2](https://github.com/allenai/molmoact2) | MolmoAct2 로봇 행동 모델 | — |
 | [allenai/molmoact](https://github.com/allenai/molmoact) | MolmoAct 원본 행동 모델 | — |
 | [X-Square-Robot/wall-x](https://github.com/X-Square-Robot/wall-x) | Wall 계열 로봇 정책 | — |
+| [Robbyant/lingbot-vla](https://github.com/Robbyant/lingbot-vla) | LingBot-VLA v1 범용 로봇 정책·사후학습·평가 | — |
+| [Robbyant/lingbot-vla-v2](https://github.com/Robbyant/lingbot-vla-v2) | LingBot-VLA 2.0: 확장 행동 공간·예측 동역학·학습·배포 | — |
+| [starVLA/starVLA](https://github.com/starVLA/starVLA) | VLM·행동 헤드·데이터·벤치마크를 조합하는 VLA 개발 프레임워크 | — |
+| [starVLA/VLAct](https://github.com/starVLA/VLAct) | VLAct: 재사용 가능한 VLA 표현을 위한 추가 사전학습 | — |
+| [QwenLM/Qwen-VLA](https://github.com/QwenLM/Qwen-VLA) | Qwen-VLA 공식 소개·기술 보고서·데모; 현재 README에 실행 코드 안내 없음 | — |
+| [OpenHelix-Team/LLaVA-VLA](https://github.com/OpenHelix-Team/LLaVA-VLA) | LLaVA 기반 로봇 조작 VLA·경량 모델·학습·평가 | — |
+| [LiAuto-DSR/AVA-VLA](https://github.com/LiAuto-DSR/AVA-VLA) | 실행 이력·활성 시각 주의를 이용하는 조작 VLA 연구 | — |
+| [mintlabkorea/TDSR-VLA](https://github.com/mintlabkorea/TDSR-VLA) | 동작 전이를 반영한 디노이징 시퀀스 표현 VLA 연구 코드 | — |
+| [LoveJu1y/LaRA-VLA](https://github.com/LoveJu1y/LaRA-VLA) | 잠재 사고·미래 예측을 결합하는 VLA 학습·평가 | — |
+| [Sage-PhysicalAI/InternVLA-A-series](https://github.com/Sage-PhysicalAI/InternVLA-A-series) | InternVLA-A1/A1.5: 이해·미래 예측·행동 통합; A1.5는 학습에 Wan 활용 | — |
+| [Sage-PhysicalAI/InternVLA-M1](https://github.com/Sage-PhysicalAI/InternVLA-M1) | 공간 정보·언어 헤드·행동 헤드를 결합한 범용 조작 정책 | — |
+| [microsoft/CogACT](https://github.com/microsoft/CogACT) | VLM 인지 표현과 확산 행동 모듈을 결합한 로봇 정책 | — |
+| [OpenHelix-Team/VLA-Adapter](https://github.com/OpenHelix-Team/VLA-Adapter) | 경량 VLA 어댑터·미세조정·ALOHA 실물 배포 예제 | — |
+| [midea-ai/DexVLA](https://github.com/midea-ai/DexVLA) | Qwen2-VL과 확산 행동 전문가를 결합한 DexVLA 학습·평가 | — |
+| [SpatialVLA/SpatialVLA](https://github.com/SpatialVLA/SpatialVLA) | 공간 표현 기반 VLA·사전학습·LoRA·사용자 데이터 학습 | — |
 
 [분야 목록으로](#분야별-바로가기)
 
@@ -233,7 +261,7 @@ python hub.py fetch --all --include-archived --dry-run
 
 | 저장소 | 역할 | 상태 |
 |---|---|---|
-| [huggingface/lerobot](https://github.com/huggingface/lerobot) | 수집·데이터·학습·실물 배포 | — |
+| [huggingface/lerobot](https://github.com/huggingface/lerobot) | 수집·데이터·학습·실물 배포; SmolVLA 등 정책 구현 포함 | — |
 | [real-stanford/diffusion_policy](https://github.com/real-stanford/diffusion_policy) | Diffusion Policy 학습 | — |
 | [tonyzhaozh/act](https://github.com/tonyzhaozh/act) | Action Chunking Transformer | — |
 | [ARISE-Initiative/robomimic](https://github.com/ARISE-Initiative/robomimic) | 시연 기반 정책 학습 | — |
@@ -475,6 +503,69 @@ python hub.py fetch --all --include-archived --dry-run
 | [robot-dexterity/tactile-gym](https://github.com/robot-dexterity/tactile-gym) | 촉각 관측 기반 강화학습 환경 | 확장 포크 |
 | [robot-dexterity/tactile-sim](https://github.com/robot-dexterity/tactile-sim) | 촉각 센서·조작 시뮬레이션 | — |
 | [univtac/UniVTAC](https://github.com/univtac/UniVTAC) | 시각·촉각 조작 학습 벤치마크 | — |
+
+[분야 목록으로](#분야별-바로가기)
+
+<a id="sector-wan"></a>
+
+### Wan · 영상 생성 · 학습 도구 · 8개
+
+| 저장소 | 역할 | 상태 |
+|---|---|---|
+| [Wan-Video/Wan2.1](https://github.com/Wan-Video/Wan2.1) | Wan 2.1 영상 생성 기반 모델; 로봇 정책의 영상 백본 연구 | — |
+| [Wan-Video/Wan2.2](https://github.com/Wan-Video/Wan2.2) | Wan 2.2 영상 생성·애니메이션; 모델별 메모리 요구 확인 | — |
+| [ali-vilab/VACE](https://github.com/ali-vilab/VACE) | Wan 기반 조건부 영상 생성·편집·마스크·참조 이미지 제어 | — |
+| [modelscope/DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio) | Wan 등 확산 모델 추론·학습·LoRA·양자화 프레임워크 | — |
+| [aigc-apps/VideoX-Fun](https://github.com/aigc-apps/VideoX-Fun) | Wan-Fun 등 영상 생성·조건 제어·학습 도구 | — |
+| [deepbeepmeep/WanGP](https://github.com/deepbeepmeep/WanGP) | Wan 등 생성 모델 로컬 실행 웹 UI·메모리 절약 옵션 | 확장 포크 |
+| [kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) | ComfyUI에서 Wan 영상 모델을 연결하는 래퍼 노드 | — |
+| [kohya-ss/musubi-tuner](https://github.com/kohya-ss/musubi-tuner) | Wan 2.1/2.2 등 영상·이미지 모델 LoRA 학습 스크립트 | — |
+
+[분야 목록으로](#분야별-바로가기)
+
+<a id="sector-wam"></a>
+
+### 월드 모델 · WAM · 영상–행동 예측 · 8개
+
+| 저장소 | 역할 | 상태 |
+|---|---|---|
+| [dreamzero0/dreamzero](https://github.com/dreamzero0/dreamzero) | DreamZero WAM: Wan 기반 미래 영상·로봇 행동 공동 예측 | — |
+| [Robbyant/lingbot-world](https://github.com/Robbyant/lingbot-world) | Wan 기반 상호작용 월드 모델 v1; 후속 v2로 이전·유지보수 종료 안내 | — |
+| [Robbyant/lingbot-world-v2](https://github.com/Robbyant/lingbot-world-v2) | LingBot-World-Infinity: Wan 기반 장기 상호작용 월드 모델; 범용 환경 | — |
+| [Robbyant/lingbot-va](https://github.com/Robbyant/lingbot-va) | LingBot-VA: 인과적 영상·행동 공동 모델·로봇 제어·미세조정 | — |
+| [boundless-large-model/boundless-world-model](https://github.com/boundless-large-model/boundless-world-model) | Wan 2.2 기반 행동 조건부 로봇 조작 미래 영상 시뮬레이터 | — |
+| [shaohua-pan/StarWAM](https://github.com/shaohua-pan/StarWAM) | Wan·Cosmos 백본과 행동 모듈을 조합하는 WAM 연구 코드 | — |
+| [AMD-AGI/Micro-World](https://github.com/AMD-AGI/Micro-World) | Wan 기반 행동 조건부 가상 세계 생성; Minecraft 환경 연구 | — |
+| [MideaAI/Worldeval](https://github.com/MideaAI/Worldeval) | WorldEval: 영상 월드 모델을 활용한 로봇 정책 평가 연구 | — |
+
+[분야 목록으로](#분야별-바로가기)
+
+<a id="sector-hri"></a>
+
+### HRI · 사람 인식 · 대화 · 협업 · 20개
+
+| 저장소 | 역할 | 상태 |
+|---|---|---|
+| [ros4hri/hri_msgs](https://github.com/ros4hri/hri_msgs) | 사람·얼굴·신체 등 HRI용 ROS 메시지·REP-155 규약 | — |
+| [ros4hri/libhri](https://github.com/ros4hri/libhri) | ROS4HRI 사람 인식 정보를 읽는 C++ 라이브러리 | — |
+| [ros4hri/pyhri](https://github.com/ros4hri/pyhri) | ROS4HRI 접근·조작용 Python 래퍼; beta·별도 master 브랜치 | — |
+| [ros4hri/hri_fullbody](https://github.com/ros4hri/hri_fullbody) | RGB/RGB-D 기반 사람 전신·2D/3D 골격 추정 | — |
+| [ros4hri/hri_face_detect](https://github.com/ros4hri/hri_face_detect) | 얼굴 검출·추적·랜드마크·머리 자세 추정 | — |
+| [ros4hri/hri_body_detect](https://github.com/ros4hri/hri_body_detect) | ROS4HRI 사람 신체 검출·위치·자세 정보 노드 | — |
+| [ros4hri/hri_person_manager](https://github.com/ros4hri/hri_person_manager) | 얼굴·신체 등 인식 단서를 사람 단위로 연결·관리 | — |
+| [ros4hri/hri_engagement](https://github.com/ros4hri/hri_engagement) | 사람과 로봇 사이의 사회적 관여 상태 추정 | — |
+| [ros4hri/hri_rviz](https://github.com/ros4hri/hri_rviz) | HRI 메시지·사람 골격을 표시하는 RViz 플러그인 | — |
+| [ros4hri/hri_face_identification](https://github.com/ros4hri/hri_face_identification) | 등록 얼굴을 이용하는 사람 신원 식별 패키지 | — |
+| [MAPIRlab/sancho_robot](https://github.com/MAPIRlab/sancho_robot) | ROS 2 사회적 로봇: 음성·시각·대화 상대 추적·머리 방향 제어 | — |
+| [geriabot/interaction_system](https://github.com/geriabot/interaction_system) | ROS 2 Jazzy 기반 목적 지향 음성 대화·LLM·행동 트리 | 확장 포크 |
+| [LinusNEP/ReLI](https://github.com/LinusNEP/ReLI) | 언어·입력 양식에 덜 종속적인 사람–로봇 상호작용 프레임워크 | — |
+| [RIL-HRI/mission-control-hub](https://github.com/RIL-HRI/mission-control-hub) | AI가 만든 다중 로봇 계획을 사람이 감독·수정하는 웹 UI | — |
+| [Cognition2Action-Lab/NIABench](https://github.com/Cognition2Action-Lab/NIABench) | 사람의 작업을 방해하지 않는 선제적 도움·LLM 벤치마크 | — |
+| [TillHielscher/gen-mod-expressive-motion-behavior](https://github.com/TillHielscher/gen-mod-expressive-motion-behavior) | 멀티모달 모델로 문맥에 맞는 로봇 표현 동작 생성·조절 | — |
+| [Industry40Lab/ErgoBot_AI](https://github.com/Industry40Lab/ErgoBot_AI) | 작업자 자세 평가·음성/LLM 명령·UR5e 협업 로봇 연구 | — |
+| [jshumhl/humanoid-companion-ros2](https://github.com/jshumhl/humanoid-companion-ros2) | 사람 감지·머리 추적·인사·음성 대화 상태 기계; 문서 작성 중 | — |
+| [empriselab/modular-query](https://github.com/empriselab/modular-query) | 정책 불확실성에 따른 사람 질의·실패 복구 시뮬레이션 | — |
+| [arvindsihag/m3_analyzer](https://github.com/arvindsihag/m3_analyzer) | 영상·RGB-D·IMU 기반 사람–로봇 협업·관여도 분석 | — |
 
 [분야 목록으로](#분야별-바로가기)
 
